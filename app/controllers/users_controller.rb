@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :login_required,only: [:new, :create]
     def new
         @user= User.new
     end
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
     end
     def set_user
         @user = User.find(params[:id])
+    end
 end
 
 
