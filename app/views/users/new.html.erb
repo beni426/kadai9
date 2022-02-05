@@ -1,4 +1,4 @@
-<h1>新規登録</h1>
+
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this <%= @user.name %> from being saved:</h2>
@@ -9,19 +9,44 @@
     </ul>
   </div>
 <% end %>
+<div class="narbar">
+    <ul class='row'>
+        <li class="col-md-6">
+       
+         <%= image_tag "fake_user.png",:size =>'250x250' %>
+         
+          
+         user_image.picture
+        
+        </li>
+         <% if current_user %>
+          <li><%= link_to  @pictures %></li>
+          <%= @user.name %>
+        <% end %>
+     <li class="col-md-6">
+        <div class="registrations-new">
+          <h1 class="regist-header">新規登録</h1> 
+    　      <p class="regist-free">無料</p>
 
-<%= form_with(model: @user, local: true) do |f| %>  
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "Create my account" %>
+   <%= form_with(model: @user, local: true) do |f| %>  
+     <div>
+    <%= f.text_field :name,class:'field name-regist', autofocus: true, autocomplete: "First", placeholder: 'user name'  %>
+      </div>
+     <div>
+    <%= f.email_field :email,class:'field email-regist', autocomplete: "email", placeholder: 'Email' %>
+      </div>
+      <div>
+      <%= f.password_field :password,class:'field password-regist',autocomplete: "off", placeholder: "Password" %>
+      </div>
+       <div>
+       <%= f.password_field :password_confirmation,class:'field confirm-regist', autocomplete: "off", placeholder: 'Confirm password' %>
+      </div>
+     <div class="actions registration-button">
+       <%= f.submit "Sign up" %>
+    </div>
 <% end %>
+          <%= link_to 'Log In', new_session_path %>
+        </li>
+    </ul>
+</div>
+

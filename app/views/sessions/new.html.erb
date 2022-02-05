@@ -1,11 +1,16 @@
-<h1>Log in</h1>
-<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+  <div class="registrations-new">
+   <h1 class="regist-header">Log in</h1>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+   <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+  <div class="field email-regist">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit "Log in" %>
+  <div class="field password-regist">
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+  </div>
+  <div class="actions registration-button">
+    <%= f.submit "Log in" %>
+  </div>
 <% end %>
+</div>

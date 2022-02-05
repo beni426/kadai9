@@ -1,0 +1,87 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.btn-default {
+    display: inline-block;
+    width: 80px;
+    padding: 10px 40px;
+    background-color: #cbd1f1;
+    color: #fff;
+    margin: 10px 0  10px 0;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .btn-default:hover {
+    background-color: #e1f1f0;
+  }
+ 
+  .side_menu-item{
+    font-size: 19px;
+    color: #0F141A;
+    display: fixed;
+    align-items: left;
+    font-weight: 700;
+    padding:15px;
+    padding-bottom: 20px;
+   
+    
+  }
+  .side_menu-item:hover{
+    background-color: rgb(230, 246, 247);
+    color: #073e61;
+    border-radius: 20px;
+    cursor:pointer;
+}
+li{
+  text-align: center;
+}
+.left-side-bar{
+  padding-right:30px;
+}
+.trends-foryou{
+  border-radius: 15px;
+  background: #f5f8fa;
+
+
+}
+.trends-foryou-block{
+  border-bottom: 1px solid #e6ecf0;
+  padding:10px 15px;
+
+}
+.trends-foryou-block:last-child{
+  border-bottom: none;
+}
+.trends-foryou-heading{
+  font-size: 19px;
+  font-weight: bold;
+  color: #14171a;
+
+}
+.trends-foryou-maininfo{
+  font-size: 13px;
+  font-weight: 300;
+  color: #657786;
+ }
+ .trends-foryou-trendname{
+   font-size: 15px;
+   color: #14171a;
+   font-weight: bold;
+   margin-bottom: 5px;
+   margin-top: 2px;
+ }
+ .picture-wrapper{
+  border-color: rgb(75, 80, 80);
+  border:1px solid rgb(192, 174, 174);
+  background-color: rgb(228, 228, 248);
+  width: 500px;
+  height: 500px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-left: 40px;
+  display: inline-block;
+  margin-left: 30%;
+
+ }
