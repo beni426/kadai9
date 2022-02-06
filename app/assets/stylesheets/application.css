@@ -291,20 +291,7 @@ ul {
    font-size: 11px;
  
  }
- .new-picture-top {
-   background-color: rgb(246,247,249);
-   border: 1px solid lightgrey ;
-   border-top-right-radius: 3px;
-   border-top-left-radius: 3px;
-   width: 101.2%;
-   height: 30px;
-   margin-bottom: 9px;
-   color: rgb(66,103,178);
-   font-weight: bold;
-   font-size: 11px;
-   picturetion:relative;
-   transform: translateX(-6.5px);
- }
+ 
  
  .new-picture-top span {
    picturetion:absolute;
@@ -314,8 +301,8 @@ ul {
  }
  
  .picture-photo {
-   width: 0.1px;
-   height: 0.1px;
+   width: 0.3px;
+   height: 0.3px;
    opacity: 0;
    overflow: hidden;
    picturetion: absolute;
@@ -462,18 +449,7 @@ ul {
  
  }
  
- .regist-header {
-   font-size: 38px;
-   margin-left: 5px;
-   margin-bottom: 3px;
- }
- .regist-free {
-   font-size: 20px;
-   font-weight: 100;
-   margin-left: 5px;
-   margin-top: 3px;
-   margin-bottom: 5px;
- }
+ 
  
  
  
@@ -499,13 +475,7 @@ ul {
      /* -webkit-appearance: none; */
  }
  
- 
- 
- .conditions {
-   width: 75%;
-   margin-left: 5px;
- }
- 
+
  .registration-button  {
    /* border: 0.5px solid black; */
    border-radius: 6px;
@@ -520,17 +490,7 @@ ul {
    margin-left: 5px;
  }
  
- .delete-account-button {
-   background-color: darkred !important;
- }
- 
- .delete-account {
-   background-color: white;
-   border: 1px solid lightgrey;
-   margin-top: 10px;
-   border-radius: 5px;
- }
- 
+
 
  
  
