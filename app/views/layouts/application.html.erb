@@ -8,19 +8,17 @@
      <%= favicon_link_tag 'user-logo.png' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   
   <header class='header-menu'>
-  
-  
-         <div class="row">
-          
-           <% if logged_in? %>
+    <div class="row">
+        <% if logged_in? %>
               <ul class='navbar' >
-              <li class="col-sm-5"> <input type="search" id="site-search" name="q"
+              <li class="col-sm-5"> <input type="search" id="site-search" 
        placeholder='search'></li>
               <li class="col-sm-3">
               <%= button_to pictures_path, method: :get, class: "fa fa-home" do %>
@@ -37,12 +35,12 @@
               </li>
                <% else %>
              <li class="col-sm-2">
-              <%= button_to new_user_path, method: :post, class: "fa fa-user-plus" do %>
+              <%= button_to new_user_path,:method => :get, class: "fa fa-user-plus" do %>
               <%= fa_icon('sign up', type: :regular,text: "Sign up") %>
               <% end %>
              </li>
              <li class="col-sm-3"> 
-               <%= button_to new_session_path, method: :post, class: "fa fa-sign-in" do %>
+               <%= button_to new_session_path, method: :get, class: "fa fa-sign-in" do %>
               <%= fa_icon('sign in', type: :regular,text:'login') %>
               <% end %>
               </li>

@@ -19,7 +19,7 @@
          user_image.picture
         
         </li>
-         <% if current_user %>
+     <% if current_user %>
           <li><%= link_to  @pictures %></li>
           <%= @user.name %>
         <% end %>
@@ -30,10 +30,10 @@
 
    <%= form_with(model: @user, local: true) do |f| %>  
      <div>
-    <%= f.text_field :name,class:'field name-regist', autofocus: true, autocomplete: "First", placeholder: 'user name'  %>
+       <%= f.text_field :name,class:'field name-regist', autofocus: true, autocomplete: "First", placeholder: 'user name'  %>
       </div>
      <div>
-    <%= f.email_field :email,class:'field email-regist', autocomplete: "email", placeholder: 'Email' %>
+      <%= f.email_field :email,class:'field email-regist', autocomplete: "email", placeholder: 'Email' %>
       </div>
       <div>
       <%= f.password_field :password,class:'field password-regist',autocomplete: "off", placeholder: "Password" %>
@@ -44,7 +44,7 @@
      <div class="actions registration-button">
        <%= f.submit "Sign up" %>
     </div>
-<% end %>
+    <% end %>
           <%= link_to 'Log In', new_session_path %>
         </li>
     </ul>

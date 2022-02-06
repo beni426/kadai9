@@ -22,9 +22,7 @@
      <div> 
       <h2>ブログ一覧</h2>
       <%= link_to '新規投稿', new_picture_path ,class:"picture-button" %></li>
-      
-      <li class='picture col-md-4'>
-       <% @pictures.each do |picture| %>
+        <% @pictures.each do |picture| %>
        <div class='picture'>
         <p>
        <%= link_to distance_of_time_in_words(Time.now, picture.created_at)+ ' ago', picture, class: 'timestamp' %>
@@ -58,5 +56,8 @@
      <% end %>
     </div>
    </li>
+    <li class='picture col-md-4'>
+    the right bar
+    </li>
   </ul>
 </div>
