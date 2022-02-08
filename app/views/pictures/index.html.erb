@@ -37,6 +37,7 @@
        <%= picture.content %><br/>
        <%= image_tag picture.image.url %><br/>
        </p>
+      
      <div class="favorite-comment-buttons">
        <% favorite = picture.favorites.where("user_id = ?", current_user.id) %>
        <% if favorite.empty? %>
@@ -50,7 +51,7 @@
       <% end %>
       <button class="comment-button"><i class="far fa-comment-alt"></i> Comment</button>
       </div>
-  <%= link_to '確認', picture_path(picture.id),class:"btn-default" %>
+      <%= link_to '確認', picture_path(picture.id),class:"btn-default" %>
       </div>
      </div>
      <% end %>
@@ -58,7 +59,5 @@
     <li class='col-md-4'>
      <p> your post </p>
     </li>
-    </div>
-   
   </ul>
 </div>
