@@ -1,6 +1,7 @@
 <div class="picture_wrapper">
 
 <h3>以下の内容で、送信する。</h3>
+<p>posted by : <%= link_to @picture.user.name %>
 <%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
   <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
   <%= form.hidden_field :image_cache %>

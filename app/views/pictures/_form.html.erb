@@ -20,6 +20,7 @@
   <%= form.text_area :content, class: 'form-picture-post',placeholder: "What's on your mind, #{current_user.name}?", autofocus: true %> <br/>
    <%= form.label :image, fa_icon('image', type: :solid, text: "Photo", color: 'rgb(66, 103, 178)'), class: 'photo-label' %><br/>
    <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
+    
   <%= form.file_field :image, class: 'picture-photo' %><br/>
   <%= form.hidden_field :image_cache %>
   <%= form.submit "Post",class:'btn-default' %>

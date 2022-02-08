@@ -26,6 +26,7 @@
        <div class='col-md-4'>
         <p>
        <%= link_to distance_of_time_in_words(Time.now, picture.created_at)+ ' ago', picture, class: 'timestamp' %>
+       <p>posted by : <%= picture.user.name %>
           <% if current_user.id == picture.user_id %>
            <span class="edit-delete-picture">
             <%= link_to '写真を編集', edit_picture_path(picture) %>
