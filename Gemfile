@@ -26,7 +26,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'psych'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'net-smtp'
+gem 'net-smtp', require: false
+gem 'net-pop', require: false
+gem 'net-imap', require: false
 
 
 gem 'bootsnap', '>= 1.4.2', require: false
