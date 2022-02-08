@@ -163,16 +163,6 @@ ul {
    font-size: 18px;
    line-height: 1.7;
  }
-
- 
- .all-users {
-   grid-area: 3 / 2 / 4 / 4;
-   width: 100%;
-   margin-top: 25px;
-   padding-bottom: 18px;
- }
-
-
  
  .user-pictures {
    grid-area: 3 / 3 / 4 / 4;
@@ -292,7 +282,7 @@ ul {
  }
  
  .edit-delete-picture {
-   position: absolute;
+   position: relative;
    right: 10px;
    font-size: 10px;
    color: rgb(90,90,90);

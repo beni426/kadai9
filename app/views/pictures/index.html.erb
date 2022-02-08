@@ -23,7 +23,7 @@
       <h2>ブログ一覧</h2>
       <%= link_to '新規投稿', new_picture_path ,class:"picture-button" %></li>
         <% @pictures.each do |picture| %>
-       <div class='picture'>
+       <div class='col-md-4'>
         <p>
        <%= link_to distance_of_time_in_words(Time.now, picture.created_at)+ ' ago', picture, class: 'timestamp' %>
           <% if current_user.id == picture.user_id %>
@@ -37,7 +37,6 @@
        <%= picture.content %><br/>
        <%= image_tag picture.image.url %><br/>
        </p>
-      
      <div class="favorite-comment-buttons">
        <% favorite = picture.favorites.where("user_id = ?", current_user.id) %>
        <% if favorite.empty? %>
@@ -56,8 +55,5 @@
      </div>
      <% end %>
      </li>
-    <li class='col-md-4'>
-     <p> your post </p>
-    </li>
-  </ul>
+   </ul>
 </div>
