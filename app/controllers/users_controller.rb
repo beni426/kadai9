@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   skip_before_action :login_required,only: [:new, :create]
+  def index
+    @users=User.all
+  end
   def new
     @user= User.new
   end
@@ -13,6 +16,17 @@ class UsersController < ApplicationController
   end
   def show
      @user=User.find(params[:id])
+  end
+  def following
+    @user  = User.find(params[:id])
+    @users = @user.followings
+    render 'show_follow'
+  end
+
+  def followers
+   @user  = User.find(params[:id])
+   @users = @user.followers
+   render 'show_follower'
   end
   private
   def user_params

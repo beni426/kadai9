@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @moive.title %>
+</p>
+<p>
+  <strong>Production_year:</strong>
+  <%= @moive.production_year %>
+</p>
+<p>
+  <strong>Running_time:</strong>
+  <%= @moive.running_time %>
+</p>
+<p>
+  <strong>Rating:</strong>
+  <%= @moive.rating %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @moive.status %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @moive.content %>
+</p>
+<%= link_to 'Edit', edit_moive_path(@moive) %> |
+<%= link_to 'Back', moives_path %>
+

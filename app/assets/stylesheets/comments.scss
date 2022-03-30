@@ -1,0 +1,20 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.comment-layout{
+    display: block;
+    border: 1px solid gainsboro;
+    margin: 20px;
+}
+.list-layout{
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+}
+#button-layout{
+  padding-left: 40%;
+}
+.btn-default1{
+  background-color: lightcyan;
+  width: 30px;
+}

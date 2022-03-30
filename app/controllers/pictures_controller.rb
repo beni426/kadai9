@@ -23,6 +23,8 @@ class PicturesController < ApplicationController
     render :new if @picture.invalid?
   end
   def show
+    @comments = @picture.comments
+    @comment = @picture.comments.build
   end
   def edit
   end

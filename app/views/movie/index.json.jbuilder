@@ -1,0 +1,1 @@
+json.array! @moives, partial: "moives/moive", as: :moive

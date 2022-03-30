@@ -1,7 +1,8 @@
+<p><%= notice %></p>
 <div class="picture-show">
   <div class="picture">
     <p class="picture-header">
-     <%= link_to distance_of_time_in_words(Time.now, @picture.created_at)+ ' ago', @picture, class: 'timestamp' %>
+     <%= link_to distance_of_time_in_words(Time.now, @picture.created_at), @picture, class: 'timestamp' %>
    <div class="picture-content">
     <p> Posted by : <%= @picture.user.name %></p><br/>
     </div>
@@ -11,14 +12,24 @@
       <%= link_to '写真を編集', edit_picture_path(@picture) %>
       <%= link_to '削除', picture_path(@picture.id), method: :delete, data: {confirm: "本当に削除してよろしいでしょうか?"} %>
     </span>
+
     </div>
   <% end %>
   <p class="post-content">
-    <%= @picture.content %><br/>
-      <%= image_tag@picture.image.url %>
-     
-  </p>
-   <div class="favorite-comment-buttons">
+    <%= image_tag@picture.image.url %>
+      <%= @picture.content %><br/>
+    </p>
+
+ <button class="comment-button"><i class="far fa-comment-alt"></i> Comment</button>
+   <div id="comments_area">
+   
+    <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, picture: @picture } %>
+    <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/form', locals: { comment: @comment, picture: @picture } %>
+    <%= link_to "もどる", pictures_path %>
+  </div>
+  <div class="favorite-comment-buttons">
    <% unless @picture.user_id == current_user.id %>
    
      <% if @favorite.present? %>
@@ -30,9 +41,10 @@
       <%= fa_icon('thumbs-up', type: :solid, text: "favorite") %>
     <% end %>
     <% end %>
-       <button class="comment-button"><i class="far fa-comment-alt"></i> Comment</button>
-       <%= link_to "もどる", pictures_path %>
-  </div>
+
+</div>
+
+  
     </div> 
   </div>
   <% end %>
